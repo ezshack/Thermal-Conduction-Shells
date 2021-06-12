@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class ThermalBody : MonoBehaviour
 {
+
+    /// <summary>
+    /// This script tries to preserve energy, but isn't perfect; no system is.
+    /// It does not take into account heat generation and input.
+    /// </summary>
+
     public SpriteRenderer layer_prefab;
     public Shader temp_vis_shader;
     public float time_multiplier;
@@ -18,12 +24,12 @@ public class ThermalBody : MonoBehaviour
     float t;
     private void Update()
     {
-        if(t >= 0.1f)
+        if(t >= 0.1f) // update every 0.1 seconds. Adjust update rate here
         {
             SphericalThermalConduction(t, time_multiplier / 1000f);
             DisplayBody();
 
-            t = 0f;
+            t = 0f; // reset t
         }
         t += Time.deltaTime;
     }
@@ -192,7 +198,7 @@ public class ThermalBody : MonoBehaviour
 
     }
 
-    [CreateAssetMenu(menuName = "Astro/Material")]
+    [CreateAssetMenu(menuName = "Thermal Conduction/Material")]
     [System.Serializable]
     public class LayerMaterial : ScriptableObject
     {
