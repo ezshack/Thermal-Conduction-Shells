@@ -15,7 +15,6 @@ public class ThermalBody : MonoBehaviour
     public float time_multiplier;
 
     public List<Layer> composition;
-    public float outer_temp = 273; // replace with energy input from star or other
 
     private void Start()
     {
@@ -55,7 +54,7 @@ public class ThermalBody : MonoBehaviour
             }
             else
             {
-                preview = Instantiate(layer_prefab, Vector3.forward * (i * 0.2f) + Vector3.right * (i * 0.05f), Quaternion.identity);
+                preview = Instantiate(layer_prefab, Vector3.forward * (i * 0.2f), Quaternion.identity);
             }
 
             preview.material = mat;

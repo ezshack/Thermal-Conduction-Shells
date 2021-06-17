@@ -153,18 +153,17 @@ MonoBehaviour:
   layer_prefab: {fileID: 6778685555722714626, guid: 5ca2d81ff0b63584aaa0658e74879c4f,
     type: 3}
   temp_vis_shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  time_multiplier: 10
+  time_multiplier: 1
   composition:
   - material: {fileID: 11400000, guid: 8a73d8ac07988a84b85b6b9d144c1c25, type: 2}
     mass: 100
-    temperature: 4
+    temperature: 24.46
   - material: {fileID: 11400000, guid: b9f3da360c3ff584a922fe4c6fa922ed, type: 2}
-    mass: 10
+    mass: 50
     temperature: 0.1
   - material: {fileID: 11400000, guid: 34cec0e8dd74f5543b219e945201e33b, type: 2}
     mass: 100
     temperature: 0.1
-  outer_temp: 1
 --- !u!4 &656934503
 Transform:
   m_ObjectHideFlags: 0
